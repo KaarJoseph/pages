@@ -2,8 +2,10 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos generales restantes */
 p {
     font-size: 125%;
 }
@@ -70,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    transition: transform 0.2s; /* Agrega una transición suave para el efecto de zoom */
+    transition: transform 0.2s;
 }
 
 .image-ring img {
@@ -80,7 +82,6 @@ body {
     border-radius: 50%;
 }
 
-/* Aplica el efecto de zoom al pasar el cursor por las imágenes */
 .image-ring:hover {
     transform: scale(1.05);
 }
@@ -89,15 +90,10 @@ body {
     margin-left: 60px;
 }
 
+/* Estilos para los botones de redes sociales */
 .social-links {
     display: flex;
     overflow-y: hidden;
-}
-
-/* Agrega un borde a los botones */
-.social-link-border {
-    border: 3px solid transparent;
-    transition: border-color 0.3s;
 }
 
 .social-link {
@@ -145,7 +141,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-/* Agregamos una animación llamada "brillo" */
+/* Animación de brillo para la imagen de perfil */
 @keyframes brillo {
     0% {
         border-color: #00ff0dc2;
@@ -158,12 +154,11 @@ body {
     }
 }
 
-/* Aplicamos la animación "brillo" al anillo de la imagen */
 .image-ring {
     animation: brillo 2s linear infinite;
 }
 
-/* Agregamos animaciones de borde para cada red social con colores más oscuros */
+/* Animaciones de borde para cada red social con colores más oscuros */
 @keyframes brillo-instagram {
     0%, 100% {
         border-color: transparent;
@@ -200,7 +195,7 @@ body {
     }
 }
 
-/* Aplica las animaciones de borde a los botones */
+/* Aplicar las animaciones de borde a los botones de redes sociales */
 .instagram.social-link-border {
     animation: brillo-instagram 3s linear infinite;
 }
@@ -229,8 +224,8 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -239,10 +234,10 @@ body {
     display: block;
     max-width: 85%;
     max-height: 85%;
-    background-color: #fff; /* Agregamos un fondo blanco para el área de la imagen */
-    border-radius: 5px; /* Agregamos bordes redondeados */
-    overflow: auto; /* Agregamos desplazamiento si la imagen es demasiado grande */
-    position: relative; /* Posición relativa para centrar verticalmente en el modal */
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: auto;
+    position: relative;
 }
 
 .close {
@@ -255,6 +250,66 @@ body {
     cursor: pointer;
 }
 
-.close:hover {
-    color: #ff0000;
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+
+    *{
+        text-align: center;
+    }
+
+    p {
+        font-size: 115%;
+    }
+    body {
+        font-size: 16px;
+        background-color: #1d1b1b; /* Fondo más oscuro */
+        color: #ffffffd7;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .container {
+        background-color: #ffffff00;
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .profile-image {
+        position: relative;
+        right: 20px;
+        margin-bottom: 30px;
+        width: 130px; /* Ajusta el tamaño de la imagen */
+        height: 130px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .profile-description {
+        text-align: justify; /* Alinea el texto justificado para mejorar la legibilidad */
+        margin: 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        width: 250px; /* Aumenta el ancho de los botones */
+        height: 100px; /* Aumenta el alto de los botones */
+        margin: 5px 0; /* Espacio vertical entre los botones */
+        font-size: 125%; /* Aumenta el tamaño del texto de los botones */
+    }
+
+    .center {
+        text-align: center; /* Centra todo el contenido */
+    }
 }
+
