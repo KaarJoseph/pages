@@ -1,0 +1,261 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre las imágenes */
+}
+
+p {
+    font-size: 125%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000c0;
+    color: #ffffffd7;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilos para el fondo animado */
+#particles-js {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Estilos para el contenido principal */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.container {
+    background-color: #0000004f;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 950px;
+    margin: 60px auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.image-ring {
+    width: 130%;
+    height: 130%;
+    border: 4px solid #36c21a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 0.2s; /* Agrega una transición suave para el efecto de zoom */
+}
+
+.image-ring img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Aplica el efecto de zoom al pasar el cursor por las imágenes */
+.image-ring:hover {
+    transform: scale(1.05);
+}
+
+.profile-description {
+    margin-left: 60px;
+}
+
+.social-links {
+    display: flex;
+    overflow-y: hidden;
+}
+
+/* Agrega un borde a los botones */
+.social-link-border {
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.social-link {
+    font-size: 110%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    color: #000;
+    transition: background-color 0.4s, color 0.3s, transform 0.3s;
+}
+
+.social-link img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: none;
+    margin-right: 5px;
+}
+
+.instagram {
+    background-color: #e60073;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.social-link:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Agregamos una animación llamada "brillo" */
+@keyframes brillo {
+    0% {
+        border-color: #00ff0dc2;
+    }
+    50% {
+        border-color: #2a5e2c;
+    }
+    100% {
+        border-color: #00ff0da6;
+    }
+}
+
+/* Aplicamos la animación "brillo" al anillo de la imagen */
+.image-ring {
+    animation: brillo 2s linear infinite;
+}
+
+/* Agregamos animaciones de borde para cada red social con colores más oscuros */
+@keyframes brillo-instagram {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #9c004e;
+    }
+}
+
+@keyframes brillo-facebook {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0e3d91;
+    }
+}
+
+@keyframes brillo-whatsapp {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0c6a31;
+    }
+}
+
+@keyframes brillo-twitter {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0b509b;
+    }
+}
+
+/* Aplica las animaciones de borde a los botones */
+.instagram.social-link-border {
+    animation: brillo-instagram 3s linear infinite;
+}
+
+.facebook.social-link-border {
+    animation: brillo-facebook 3s linear infinite;
+}
+
+.whatsapp.social-link-border {
+    animation: brillo-whatsapp 3s linear infinite;
+}
+
+.twitter.social-link-border {
+    animation: brillo-twitter 3s linear infinite;
+}
+
+/* Estilos para el modal de imagen */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    margin: auto;
+    margin-top: 3%;
+    display: block;
+    max-width: 85%;
+    max-height: 85%;
+    background-color: #fff; /* Agregamos un fondo blanco para el área de la imagen */
+    border-radius: 5px; /* Agregamos bordes redondeados */
+    overflow: auto; /* Agregamos desplazamiento si la imagen es demasiado grande */
+    position: relative; /* Posición relativa para centrar verticalmente en el modal */
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff0000;
+}
