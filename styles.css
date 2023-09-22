@@ -96,6 +96,12 @@ body {
     overflow-y: hidden;
 }
 
+/* Agrega un borde a los botones */
+.social-link-border {
+    border: 5px solid transparent;
+    transition: border-color 0.3s;
+}
+
 .social-link {
     font-size: 110%;
     text-decoration: none;
@@ -197,19 +203,19 @@ body {
 
 /* Aplicar las animaciones de borde a los botones de redes sociales */
 .instagram.social-link-border {
-    animation: brillo-instagram 3s linear infinite;
+    animation: brillo-instagram 2s linear infinite;
 }
 
 .facebook.social-link-border {
-    animation: brillo-facebook 3s linear infinite;
+    animation: brillo-facebook 2s linear infinite;
 }
 
 .whatsapp.social-link-border {
-    animation: brillo-whatsapp 3s linear infinite;
+    animation: brillo-whatsapp 2s linear infinite;
 }
 
 .twitter.social-link-border {
-    animation: brillo-twitter 3s linear infinite;
+    animation: brillo-twitter 2s linear infinite;
 }
 
 /* Estilos para el modal de imagen */
@@ -304,7 +310,7 @@ body {
     .social-link {
         width: 250px; /* Aumenta el ancho de los botones */
         height: 100px; /* Aumenta el alto de los botones */
-        margin: 5px 0; /* Espacio vertical entre los botones */
+        margin: 5px 20px; /* Espacio vertical entre los botones */
         font-size: 125%; /* Aumenta el tamaño del texto de los botones */
     }
 
