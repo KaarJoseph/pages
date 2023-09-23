@@ -54,12 +54,14 @@ body {
 .profile {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 .profile-image {
     position: relative;
-    width: 150px;
+    width: 370px;
     height: 150px;
 }
 
@@ -87,7 +89,7 @@ body {
 }
 
 .profile-description {
-    margin-left: 60px;
+    margin-left:70px;
 }
 
 /* Estilos para los botones de redes sociales */
@@ -264,7 +266,7 @@ body {
     }
 
     p {
-        font-size: 115%;
+        font-size: 105%;
     }
     body {
         font-size: 16px;
@@ -287,6 +289,14 @@ body {
         text-align: center;
         align-items: center;
         position: relative;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    /* Margenes de nombre de usuario*/
+    h1{
+        margin-top: -10px;
+        margin-bottom: -10px;
     }
 
     .profile-image {
@@ -307,9 +317,12 @@ body {
         align-items: center;
     }
 
+    .modal {
+        padding-top: 50px;
+    }
     .social-link {
         width: 250px; /* Aumenta el ancho de los botones */
-        height: 100px; /* Aumenta el alto de los botones */
+        height: 45px; /* Aumenta el alto de los botones */
         margin: 5px 20px; /* Espacio vertical entre los botones */
         font-size: 125%; /* Aumenta el tamaño del texto de los botones */
     }
