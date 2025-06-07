@@ -1,334 +1,259 @@
-/* Estilos generales */
+/* RESET GENERAL */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilos generales restantes */
-p {
-    font-size: 125%;
-}
-
+/* TIPOGRAFÍA Y FONDO GENERAL */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000000c0;
-    color: #ffffffd7;
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #000000c0;
+  color: #ffffff;
 }
 
-/* Estilos para el fondo animado */
+/* TEXTO GENERAL */
+p {
+  font-size: 120%;
+  line-height: 1.5;
+}
+
+/* FONDO ANIMADO */
 #particles-js {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
-/* Estilos para el contenido principal */
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    max-height: calc(100vh - 40px);
-    overflow-y: auto;
-}
-
+/* CONTENEDOR PRINCIPAL */
 .container {
-    background-color: #0000004f;
-    border-radius: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 950px;
-    margin: 60px auto;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+  background-color: #0000004f;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 950px;
+  margin: 60px auto 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
+/* CONTENIDO CENTRAL */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* PERFIL */
 .profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
-    margin-left: 30px;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
 }
 
 .profile-image {
-    position: relative;
-    width: 370px;
-    height: 150px;
+  position: relative;
+  width: 180px;
+  height: 180px;
 }
 
 .image-ring {
-    width: 130%;
-    height: 130%;
-    border: 4px solid #36c21a;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    transition: transform 0.2s;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #36c21a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+  animation: brillo 2s linear infinite;
 }
 
 .image-ring img {
-    width: 95%;
-    height: 95%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .image-ring:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* TITULAR */
+.profile-description h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* DESCRIPCIÓN */
 .profile-description {
-    margin-left:70px;
+  max-width: 550px;
+  text-align: justify;
 }
 
-/* Estilos para los botones de redes sociales */
+/* ENLACES SOCIALES */
 .social-links {
-    display: flex;
-    overflow-y: hidden;
-}
-
-/* Agrega un borde a los botones */
-.social-link-border {
-    border: 5px solid transparent;
-    transition: border-color 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .social-link {
-    font-size: 110%;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 20px;
-    width: 180px;
-    height: 45px;
-    border-radius: 50px;
-    color: #000;
-    transition: background-color 0.4s, color 0.3s, transform 0.3s;
+  font-size: 115%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 50px;
+  border-radius: 50px;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.4s, color 0.3s, transform 0.3s;
 }
+
+/* Colores personalizados y masculinos */
+.portfolio { background-color: #a2d2ff; }      /* azul pastel */
+.linkedin  { background-color: #405de6; color: white; }
+.instagram { background-color: #ff8fa3; }      /* rojo claro masculino */
+.twitter   { background-color: #1da1f2; color: white; }
 
 .social-link img {
-    width: 20px;
-    height: 20px;
-    margin-bottom: none;
-    margin-right: 5px;
-}
-
-.instagram {
-    background-color: #e60073;
-}
-
-.facebook {
-    background-color: #1877f2;
-}
-
-.whatsapp {
-    background-color: #25d366;
-}
-
-.twitter {
-    background-color: #1da1f2;
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
 }
 
 .social-link:hover {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  background-color: #ffffff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-/* Animación de brillo para la imagen de perfil */
+/* ANIMACIONES */
 @keyframes brillo {
-    0% {
-        border-color: #00ff0dc2;
-    }
-    50% {
-        border-color: #2a5e2c;
-    }
-    100% {
-        border-color: #00ff0da6;
-    }
+  0%, 100% { border-color: #00ff0dc2; }
+  50%      { border-color: #2a5e2c; }
 }
 
-.image-ring {
-    animation: brillo 2s linear infinite;
+@keyframes shake-weight {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(3deg);
+  }
+  10% {
+    transform: rotate(-3deg);
+  }
+  15% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(-1deg);
+  }
+  33.33% {
+    transform: rotate(0deg);
+  }
+
+  /* Del 33.34% al 100% se mantiene quieto */
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-/* Animaciones de borde para cada red social con colores más oscuros */
-@keyframes brillo-instagram {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #9c004e;
-    }
+.animate-shake {
+  animation: shake-weight 3s infinite;
+  transform-origin: center;
 }
 
-@keyframes brillo-facebook {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #0e3d91;
-    }
-}
-
-@keyframes brillo-whatsapp {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #0c6a31;
-    }
-}
-
-@keyframes brillo-twitter {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #0b509b;
-    }
-}
-
-/* Aplicar las animaciones de borde a los botones de redes sociales */
-.instagram.social-link-border {
-    animation: brillo-instagram 2s linear infinite;
-}
-
-.facebook.social-link-border {
-    animation: brillo-facebook 2s linear infinite;
-}
-
-.whatsapp.social-link-border {
-    animation: brillo-whatsapp 2s linear infinite;
-}
-
-.twitter.social-link-border {
-    animation: brillo-twitter 2s linear infinite;
-}
-
-/* Estilos para el modal de imagen */
+/* MODAL */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    margin: auto;
-    margin-top: 3%;
-    display: block;
-    max-width: 85%;
-    max-height: 85%;
-    background-color: #fff;
-    border-radius: 5px;
-    overflow: auto;
-    position: relative;
+  margin: 3% auto;
+  max-width: 85%;
+  max-height: 85%;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: auto;
+  position: relative;
 }
 
 .close {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Estilos para dispositivos móviles */
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  p {
+    font-size: 100%;
+  }
 
-    *{
-        text-align: center;
-    }
+  .container {
+    width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+  }
 
-    p {
-        font-size: 105%;
-    }
-    body {
-        font-size: 16px;
-        background-color: #1d1b1b; /* Fondo más oscuro */
-        color: #ffffffd7;
-        font-family: 'Times New Roman', Times, serif;
-    }
+  .profile {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .container {
-        background-color: #ffffff00;
-        width: 90%;
-        margin: 10px auto;
-        padding: 10px;
-        box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
-        margin-bottom: 20px;
-    }
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
 
-    .profile {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 10px;
-        margin-left: 0px;
-        margin-top: 0px;
-    }
-    /* Margenes de nombre de usuario*/
-    h1{
-        margin-top: -10px;
-        margin-bottom: -10px;
-    }
+  .profile-description h1 {
+    font-size: 1.7em;
+  }
 
-    .profile-image {
-        position: relative;
-        right: 20px;
-        margin-bottom: 30px;
-        width: 130px; /* Ajusta el tamaño de la imagen */
-        height: 130px; /* Ajusta el tamaño de la imagen */
-    }
+  .profile-description {
+    text-align: justify;
+    margin: 0 10px;
+  }
 
-    .profile-description {
-        text-align: justify; /* Alinea el texto justificado para mejorar la legibilidad */
-        margin: 10px;
-    }
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modal {
-        padding-top: 50px;
-    }
-    .social-link {
-        width: 250px; /* Aumenta el ancho de los botones */
-        height: 45px; /* Aumenta el alto de los botones */
-        margin: 5px 20px; /* Espacio vertical entre los botones */
-        font-size: 125%; /* Aumenta el tamaño del texto de los botones */
-    }
-
-    .center {
-        text-align: center; /* Centra todo el contenido */
-    }
+  .social-link {
+    width: 250px;
+    font-size: 110%;
+  }
 }
-

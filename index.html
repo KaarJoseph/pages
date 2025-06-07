@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Mi Perfil Social</title>
 </head>
 <body>
     <div class="container">
         <div id="particles-js"></div>
-        <div class="center">
+
+        <main class="center">
             <div class="loader"></div>
-            <div class="profile">
+
+            <section class="profile">
                 <div class="profile-image">
                     <div class="image-ring">
-                        <img src="images/ftm.png" alt="Tu imagen de perfil" id="profile-pic">
+                        <img src="img/ftm.png" alt="Imagen de perfil de Kaar Joseph" id="profile-pic" />
                     </div>
                 </div>
                 <div class="profile-description">
-                    <br>
                     <h1>Kaar Joseph</h1>
-                    <br>
-                    <p>🎓 ¡Hola! Soy estudiante de la Universidad Politécnica Salesiana
-                        en busca de la próxima gran aventura en el mundo de la tecnología 💡💻.
-                        Explora conmigo este viaje lleno de código, creatividad y risas.
-                        <br><br>
-                        ¡Bienvenido a mi rincón digital! 🚀</p>
+                    <p>
+                        👨‍💻 Soy Kaar Joseph, Ingeniero en Ciencias Computacionales y orgullosamente Shuar. 
+                        Combino la riqueza de mis raíces culturales con la tecnología para diseñar soluciones prácticas e innovadoras.
+                    </p>
+                    <p>
+                        🌟 Mi propósito es usar la tecnología como herramienta para conectar culturas, resolver problemas complejos y construir un futuro inclusivo.
+                    </p>
+                    <p>
+                        🚀 Este es un espacio para conocer más sobre mí y mis intereses profesionales. ¡Gracias por visitarlo!
+                    </p>
                 </div>
-            </div>
-            <div class="social-links">
-                <a class="social-link instagram social-link-border" href="https://www.instagram.com/kaar_joseph/" target="_blank">
-                    <img src="images/ig.png" alt="Instagram">
-                    Instagram
+            </section>
+
+            <nav class="social-links" aria-label="Enlaces a redes sociales">
+
+                <a href="https://tu-sitio.com" class="social-link portfolio animate-shake social-link-border">
+                <img src="img/LOGO_VFF.png" alt="Sitio Web">Mi Portafolio
                 </a>
-                <a class="social-link facebook social-link-border" href="https://www.facebook.com/KaarUnkuchSaant" target="_blank">
-                    <img src="images/fb.png" alt="Facebook">
-                    Facebook
+
+                <a href="https://www.linkedin.com/in/kaarjoseph" class="social-link linkedin social-link-border">
+                <img src="img/linkedin.png" alt="LinkedIn">LinkedIn
                 </a>
-                <a class="social-link whatsapp social-link-border" href="https://api.whatsapp.com/send?phone=593990323510" target="_blank">
-                    <img src="images/wh.png" alt="WhatsApp">
-                    WhatsApp
+
+                <a href="https://instagram.com/kaarjoseph" class="social-link instagram social-link-border">
+                <img src="img/instagram.png" alt="Instagram">Instagram
                 </a>
-                <a class="social-link twitter social-link-border" href="https://twitter.com/kaar_joseph" target="_blank">
-                    <img src="images/x.png" alt="Twitter">
-                    Twitter
+
+                <a href="https://twitter.com/kaarjoseph" class="social-link twitter social-link-border">
+                <img src="img/xv.png" alt="Twitter"> X (Twitter)
                 </a>
-            </div>
-        </div>
+
+            </nav>
+        </main>
     </div>
 
     <!-- Modal para la imagen -->
     <div id="myModal" class="modal" style="display: none;">
         <span class="close" id="close-modal">&times;</span>
-        <img src="" id="modal-image" class="modal-content">
+        <img src="" id="modal-image" class="modal-content" alt="Imagen ampliada del perfil" />
     </div>
-    
 
     <script src="json/particles.min.js"></script>
     <script src="js/app.js"></script>

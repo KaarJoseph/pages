@@ -1,28 +1,26 @@
-// Obtiene el modal y la imagen
-var modal = document.getElementById("myModal");
-var img = document.getElementById("modal-image");
-var profilePic = document.getElementById("profile-pic");
-var closeModal = document.getElementById("close-modal");
+window.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("myModal");
+  const img = document.getElementById("modal-image");
+  const profilePic = document.getElementById("profile-pic");
+  const closeModal = document.getElementById("close-modal");
 
-// Agrega un evento para abrir el modal al hacer clic en la imagen de perfil
-profilePic.addEventListener("click", function() {
-    modal.style.display = "block";
-    img.src = this.src;
-});
-
-// Agrega un evento para cerrar el modal al hacer clic en la "x"
-closeModal.addEventListener("click", function() {
-    modal.style.display = "none";
-});
-
-// Cierra el modal al hacer clic fuera de él solo si se ha abierto
-window.addEventListener("click", function(event) {
-    if (modal.style.display === "block" && event.target == modal) {
-        modal.style.display = "none";
+  profilePic?.addEventListener("click", () => {
+    if (modal && img) {
+      modal.style.display = "flex";
+      img.src = profilePic.src;
     }
-});
+  });
 
-// Asegura que el modal esté oculto al cargar la página
-window.addEventListener("load", function() {
-    modal.style.display = "none";
+  closeModal?.addEventListener("click", () => {
+    if (modal) modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (modal && modal.style.display === "flex" && event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Asegura ocultar el modal al cargar
+  if (modal) modal.style.display = "none";
 });
