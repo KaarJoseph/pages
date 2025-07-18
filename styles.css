@@ -105,7 +105,7 @@ body {
 /* PERFIL - DISEÑO MEJORADO */
 .profile {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 3rem;
@@ -197,7 +197,7 @@ body {
 .profile-description p {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 12.2rem;
+  margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
 
@@ -207,7 +207,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: -0.5rem;
+  margin-top: 1.5rem;
   width: 100%;
 }
 
